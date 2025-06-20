@@ -65,7 +65,7 @@ Visit `http://localhost:3000` in your browser.
 
 The website is deployed here : https://delightful-sable-574b35.netlify.app/
 
-6. Deploy your site.
+
 
 ## Route Protection
 
