@@ -33,8 +33,8 @@ const EditProfile = () => {
         <div className="background">
             <div className="dashboard-container">
             <ThemeToggle />
-            <h1>Edit Bio</h1>
             <div className="form-group">
+                <h1>Edit Bio</h1>
                 <label>Bio : </label>
                 <textarea
                     value={bio}

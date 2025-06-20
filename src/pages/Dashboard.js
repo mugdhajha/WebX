@@ -23,14 +23,18 @@ const Dashboard = () => {
     return (
         <div className="background">
             <div className="dashboard-container">
-                <ToastContainer position="bottom-center" autoClose={2000} />
                 <ThemeToggle />
-                <h1>Welcome, {user.name}</h1>
-                <p><strong>Email : </strong>{user.email}</p>
-                <p><strong>Bio : </strong>{user.bio ||'No bio set yet.'}</p>
-                <div className="space-between"></div>
-                <button onClick={() => navigate('/edit-profile')} className="dashboard-button">Edit Profile</button>
-                <button onClick={handleLogout} className="dashboard-button">Logout</button>
+                <div className="form-group">
+                    <h1>Welcome, {user.name}</h1>
+                    <p><strong>Email : </strong>{user.email}</p>
+                    <p><strong>Bio : </strong>{user.bio ||'No bio set yet.'}</p>
+                </div>
+                <div className="button-group">
+                    <div className="space-between"></div>
+                    <button onClick={() => navigate('/edit-profile')} className="dashboard-button">Edit Profile</button>
+                    <button onClick={handleLogout} className="dashboard-button">Logout</button>
+                </div>
+                <ToastContainer position="bottom-center" autoClose={2000} />
             </div>
         </div>
     );
