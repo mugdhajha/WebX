@@ -65,6 +65,19 @@ Visit `http://localhost:3000` in your browser.
 
 The website is deployed here : https://delightful-sable-574b35.netlify.app/
 
+Or you can deploy it through these steps:
+
+1. Push your project to a GitHub repository.
+2. Go to [Netlify](https://app.netlify.com/) and link your repository.
+3. Set the build command to `npm run build`.
+4. Set the publish directory to `build`.
+5. Ensure you have a `_redirects` file in your `public/` folder with this content:
+
+   ```
+   /*    /index.html   200
+   ```
+
+6. Deploy your site.
 
 
 ## Route Protection
