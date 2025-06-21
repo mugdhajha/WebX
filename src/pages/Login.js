@@ -5,7 +5,6 @@ import { useAuth } from "../context/AuthContext";
 import { validUser } from "../services/authService";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import "../styles/Login.css";
 import ThemeToggle from "../components/ThemeToggle";
 
 const Login = () => {
@@ -36,11 +35,6 @@ const Login = () => {
             <ToastContainer position="bottom-center" autoClose={2000}/>    
             <h2>Login</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
-                {/* <div className="form-group">
-                <label>Name:</label>
-                <input type="text" {...register("name", { required: true })} />
-                {errors.name && <span className="error">Name is required</span>}
-                </div> */}
                 <div className="form-group">
                 <label>Email:</label>
                 <input type="email" {...register("email", { required: true })} />

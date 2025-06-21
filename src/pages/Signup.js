@@ -1,8 +1,10 @@
 import React from "react";
-import { useForm } from "react-hook-form";
+import { set, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { registerUser, validUser } from "../services/authService";
 import ThemeToggle from "../components/ThemeToggle";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Signup = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -14,12 +16,12 @@ const Signup = () => {
         const existingUser = users.find(user => user.email === data.email);
 
         if (existingUser) {
-            alert("User already exists");
+            toast.error("User already exists");
         } else {
             users.push(data);
             localStorage.setItem('users', JSON.stringify(users));
-            alert("Registration successful");
-            navigate("/login");
+            toast.success("Registration successful");
+            setTimeout(() => navigate("/login"),1000);
         }
     };
 
@@ -52,6 +54,7 @@ const Signup = () => {
                 <p>Already have an account? <span onClick={goToLogin} className="link">Login</span></p>
                 </div>
                 </div>
+            <ToastContainer position="bottom-center" autoClose={2000} />
         </div>
     );
 };
