@@ -63,7 +63,7 @@ Visit `http://localhost:3000` in your browser.
 
 ## Netlify Deployment
 
-The website is deployed here : https://delightful-sable-574b35.netlify.app/
+The website is deployed here : https://jade-fox-b5e338.netlify.app/
 
 Or you can deploy it through these steps:
 
